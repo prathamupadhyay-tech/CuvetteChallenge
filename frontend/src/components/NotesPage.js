@@ -35,7 +35,7 @@ const NotesPage = ({ selectedGroup, setSidebarLeft }) => {
     const fetchData = async () => {
       try {
         let res = await axios.get(
-          `http://localhost:5000/api/notes/groupNotes/${selectedGroup._id}`
+          `https://cuvettechallenge.onrender.com/api/notes/groupNotes/${selectedGroup._id}`
         );
         if (!res) {
           console.log(res);
@@ -61,7 +61,7 @@ const NotesPage = ({ selectedGroup, setSidebarLeft }) => {
     }
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/notes/${selectedGroup._id}`,
+        `https://cuvettechallenge.onrender.com/api/notes/${selectedGroup._id}`,
         {
           des: newNote,
         }

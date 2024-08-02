@@ -27,7 +27,7 @@ const CreateGroupPopUp = ({ triggerReload, setAddGroupClicked }) => {
       color: groupData.color,
     };
     try {
-      let res = await axios.post("http://localhost:5000/api/group/", group);
+      let res = await axios.post("https://cuvettechallenge.onrender.com/api/group/", group);
       if (res) {
         console.log(res);
       }
