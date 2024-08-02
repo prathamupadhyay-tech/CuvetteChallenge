@@ -1,0 +1,79 @@
+.sidebar-container{
+    width: 20%;
+    min-width: 18em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 2em;
+    background-color: white;
+    position: relative;
+    transition: left 0.3s ease;
+}
+.side-bar-header{
+    display: flex;
+    justify-content: center;
+
+}
+.notes-groups-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-height: 90vh;
+    overflow: auto;
+}
+.notes-groups{
+    
+    display: flex;
+    gap: 1em;
+    padding: 0.5em;
+    padding-left: 2em;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+.notes-groups:hover{
+    background-color: hsl(0, 0%, 18%,17%);
+    cursor: pointer;
+}
+.notes-groups>p{
+    font-size: 24px;
+    font-weight: 500;
+
+}
+.notes-group-start{
+    width: 2em;
+    height: 2em;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+}
+
+.add-group-btn{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    border: none;
+    font-size: 2em;
+    color: white;
+    background-color: #16008B;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+@media (max-width:660px) {
+    .sidebar-container{
+        position: absolute;
+        left: -60px;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
